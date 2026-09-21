@@ -25,10 +25,9 @@ calculate frequency of occurence.
 print the characters and its huffmancode.
  
 ## Program:
-
-``` Python
+```
 # Step 1: Get the input string
-input_string = "Welcome to Python Programming"  # Example input string
+input_string = "huffman coding"  # Example input string
 # Step 2: Calculate frequency of each character in the input string
 frequency = {}
 for char in input_string:
@@ -36,7 +35,7 @@ for char in input_string:
         frequency[char] += 1
     else:
         frequency[char] = 1
-# Step 3: Create tree nodes
+ # Step 3: Create tree nodes
 nodes = [[char, freq] for char, freq in frequency.items()]
 # Step 4: Main function to implement Huffman coding
 while len(nodes) > 1:
@@ -50,6 +49,7 @@ while len(nodes) > 1:
     # Create a new node with combined frequency
     new_node = [[left, right], left[1] + right[1]]
     nodes.append(new_node)
+
 # The final node is the Huffman tree
 huffman_tree = nodes[0]
 # Step 5: Generate Huffman codes
@@ -70,7 +70,8 @@ for char, code in huffman_codes.items():
     print(f"    {char}    |    {code}")
 ```
 ## Output:
-<img width="335" height="427" alt="image" src="https://github.com/user-attachments/assets/ae2c5aa6-99bc-44bf-9468-48620c82f5f0" />
+
+<img width="500" height="363" alt="image" src="https://github.com/user-attachments/assets/a7da1af3-d862-453c-8279-7bb80f638bbb" />
 
 
 
